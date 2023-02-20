@@ -70,8 +70,7 @@ def dft_logmag(sounds, fft_chunks, fft_step=256, fft_size=512):
 
 def patches(sounds, patch_step, patch_size):
     num_sounds, num_samples, num_frequencies = sounds.shape
-    num_patches = num_samples // patch_step
-    if num_samples%patch_step>0: num_patches-=1
+    num_patches = ((num_samples - patch_size) // patch_step)+1
     p = np.zeros((num_sounds,num_patches,patch_size,num_frequencies))
     for i in range(num_sounds):
         for j in range(num_patches):
