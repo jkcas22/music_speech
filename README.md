@@ -7,3 +7,4 @@
 - Feed sequentially the consecutive time samples
 - Study performance depending on the number of used time steps (5-32)
 - Train on 80% of the data and validate on remaining 20, study the convergence
+- ...
